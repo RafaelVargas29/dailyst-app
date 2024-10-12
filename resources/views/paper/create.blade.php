@@ -16,6 +16,14 @@
         />
         <x-paper-components.modal />
     </div>
+
+    <div class="pl-5">
+        @foreach ($papers as $p)
+            <div class="pt-3">
+                <x-paper-components.card title="{{ $p->title }}"/>
+            </div>
+        @endforeach
+    </div>
 </body>
 </html>
 

@@ -12,7 +12,9 @@ class PaperController extends Controller
      */
     public function index()
     {
-        return view('paper.create');
+        $papers = Paper::all();
+
+        return view('paper.create', ['papers' => $papers]);
     }
 
     /**
